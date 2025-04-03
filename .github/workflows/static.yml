@@ -3,17 +3,37 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # 根据实际情况修改为你的分支名称
+      - main  # 可根据实际情况修改为你的目标分支
 
 jobs:
   deploy:
-    runs-on: ubuntu - latest
+    runs-on: ubuntu-latest
+
     steps:
+      # 步骤 1: 检出代码
       - name: Checkout
         uses: actions/checkout@v3
 
+      # 步骤 2: 缓存 Node.js 依赖
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      # 步骤 3: 安装依赖
+      - name: Install dependencies
+        run: npm install
+
+      # 步骤 4: 构建项目
+      - name: Build project
+        run: npm run build
+
+      # 步骤 5: 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions - gh - pages@v3
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir:./pages  # 指定要发布的文件夹为 /pages
+          publish_dir: ./pages  # 若构建输出目录不同，需相应修改
