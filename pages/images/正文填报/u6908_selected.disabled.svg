@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="15px" viewBox="89 4929 15 15" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 96.5 4929  C 100.7 4929  104 4932.3  104 4936.5  C 104 4940.7  100.7 4944  96.5 4944  C 92.3 4944  89 4940.7  89 4936.5  C 89 4932.3  92.3 4929  96.5 4929  Z " fill-rule="nonzero" fill="rgba(240, 240, 240, 1)" stroke="none" class="fill" />
+  <path d="M 96.5 4929.5  C 100.42 4929.5  103.5 4932.58  103.5 4936.5  C 103.5 4940.42  100.42 4943.5  96.5 4943.5  C 92.58 4943.5  89.5 4940.42  89.5 4936.5  C 89.5 4932.58  92.58 4929.5  96.5 4929.5  Z " stroke-width="1" stroke-dasharray="0" stroke="rgba(0, 114, 231, 1)" fill="none" class="stroke" stroke-dashoffset="0.5" />
+  <path d="M 96.5 4940.25  C 94.4 4940.25  92.75 4938.6  92.75 4936.5  C 92.75 4934.4  94.4 4932.75  96.5 4932.75  C 98.6 4932.75  100.25 4934.4  100.25 4936.5  C 100.25 4938.6  98.6 4940.25  96.5 4940.25  " fill-rule="nonzero" fill="rgba(0, 114, 231, 1)" stroke="none" class="stroke btn_check" />
+</svg>
